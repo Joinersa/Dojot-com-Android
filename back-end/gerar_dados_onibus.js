@@ -6,8 +6,6 @@ var client  = mqtt.connect('mqtt://10.211.2.253'); // IP LOCAL SERVIDOR.
 client.on('connect', function () {
 	console.log('Conectou!');
 	console.log('Salvando coordenadas...');
-	
-	client.subscribe('/admin/4843f5/attrs');
 
 	console.log("Tamanho do Array: " + coordenadasOnbus.length);
 	
@@ -31,12 +29,6 @@ client.on('connect', function () {
 	}, 3000);
 
 });
-
-
-client.on('message', function (topic, message) {  
-	console.log("msg recebida => " + message.toString());  
-});
-
 
 // COORDENADAS DA ROTA CIRCULAR-UFPA.
 
